@@ -30,7 +30,7 @@ def run_realtime_esprit(block_size=4096,
                         center_freq=100e6,
                         n_sinusoids=3):
 
-    # --- Setup SDR ---
+    # Setup SDR 
     sdr, stream = setup_kraken_sdr(sample_rate, center_freq)
     
     buff = np.zeros(block_size, np.complex64)
@@ -59,3 +59,4 @@ def run_realtime_esprit(block_size=4096,
 
 if __name__ == "__main__":
     run_realtime_esprit()
+
